@@ -10,10 +10,10 @@
             = f.text_field :title, placeholder: "Title", hide_label: true
             = f.text_field :body, placeholder: "Body", hide_label: true
             = f.hidden_field :quality, value: :swill
-            = f.submit 'Create Idea', class: 'pull-right form-control'
+            = f.submit 'Create Idea', class: 'pull-right form-control', id: 'idea'
 .row
   .col-md-8.col-md-offset-2
-    %table.table.table-bordered.table-hover
+    %table.table.table-bordered.table-hover.ideas
       %tr
         %th Title
         %th Body

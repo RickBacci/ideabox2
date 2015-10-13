@@ -15,6 +15,7 @@ gem 'bootstrap_form'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'puma'
+gem 'responders'
 
 group :development, :test do
   gem 'byebug'
