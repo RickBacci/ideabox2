@@ -10,8 +10,8 @@ feature "User" do
       visit root_path
 
 
-      fill_in 'Title', with: 'Idea title'
-      fill_in 'Body', with: 'Idea body'
+      fill_in 'title', with: 'Idea title'
+      fill_in 'body', with: 'Idea body'
 
       click_on "Create Idea"
 
