@@ -1,2 +1,26 @@
-%h1 Ideas#index
-%p Find me in app/views/ideas/index.html.haml
+
+.row
+  .col-md-8.col-md-offset-2
+    %h1.text-center
+      IdeaBox 2.0
+    .panel.panel-default
+      .panel-body
+        .well
+          = bootstrap_form_tag url: ideas_path, layout: :inline do |f|
+            = f.text_field :title, placeholder: "Title", hide_label: true
+            = f.text_field :body, placeholder: "Body", hide_label: true
+            = f.hidden_field :quality, value: :swill
+            = f.submit 'Create Idea', class: 'pull-right form-control'
+.row
+  .col-md-8.col-md-offset-2
+    %table.table.table-bordered.table-hover
+      %tr
+        %th Title
+        %th Body
+        %th Quality
+      - @ideas.each do |idea|
+        %tr
+          %td= idea.title
+          %td= idea.body
+          %td= idea.quality
+

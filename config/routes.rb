@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'ideas/index'
 
   root 'ideas#index'
+  resources :ideas, only: [:index, :create]
 end
