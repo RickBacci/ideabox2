@@ -24,7 +24,7 @@ $(document).ready(function() {
           console.log(data);
           var markup = renderRow(data);
 
-          $('.ideas').append(markup);
+          $('#headings').after(markup);
           $('#title').val('');
           $('#body').val('');
         },
@@ -48,8 +48,9 @@ $(document).ready(function() {
         +      data.quality
         +   '</td>'
         + '</tr>'
-        );
-    }
+    );
+  }
+
 });
 
 
