@@ -2,13 +2,8 @@ require 'rails_helper'
 
 feature "User" do
 
-  before do
-  end
-
-
   scenario "can create an idea" do
       visit root_path
-
 
       fill_in 'title', with: 'Idea title'
       fill_in 'body', with: 'Idea body'
