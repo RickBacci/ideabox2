@@ -23,6 +23,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails', '~> 3.0'
+  gem "teaspoon-mocha"
+  # gem 'selenium-webdriver', '~> 2.48.0'
+  gem "capybara-webkit", git: "https://github.com/thoughtbot/capybara-webkit.git"
 end
 
 group :test do

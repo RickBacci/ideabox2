@@ -1,0 +1,12 @@
+.row
+  .col-md-8.col-md-offset-2
+    %h1.text-center
+      Edit Idea
+    .panel.panel-default
+      .panel-body
+        .well
+          = bootstrap_form_for @idea do |f|
+            = f.text_field :title
+            = f.text_field :body
+            = f.hidden_field :quality, value: :swill
+            = f.submit 'Update Idea', class: 'pull-right form-control', id: 'edit-idea'
