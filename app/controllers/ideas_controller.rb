@@ -2,8 +2,8 @@ class IdeasController < ApplicationController
   respond_to :json, :html
 
   def index
-   @ideas = Idea.order(created_at: :desc)
-   @idea = Idea.new
+    @idea = Idea.new
+    respond_with Idea.order(created_at: :desc), location: nil
   end
 
   def create
@@ -23,9 +23,14 @@ class IdeasController < ApplicationController
     end
   end
 
+  def destroy
+    respond_with Idea.find(params[:id]).delete
+    head :no_content
+  end
+
   private
 
   def idea_params
-    params.require(:idea).permit(:title, :body, :quality)
+    params.require(:idea).permit(:id, :title, :body, :quality)
   end
 end
