@@ -1,19 +1,19 @@
 function renderRow(data) {
   return  (
-      '<tr>'
+        '<tr>'
       +   '<td>'
-      +      data.title
+      +     data.title
       +   '</td>'
       +   '<td>'
-      +      data.body
+      +     truncateBody(data)
       +   '</td>'
       +   '<td>'
-      +      data.quality
+      +     data.quality
       +   '</td>'
       +   '<td>'
       +     "<a href='/ideas/"
-      +        data.id
-      +   "/edit' class='btn btn-default btn-xs edit-idea' >Edit</a>"
+      +       data.id
+      +     "/edit' class='btn btn-default btn-xs edit-idea' >Edit</a>"
       +   '</td>'
       +   '<td>'
       +     "<a href='#'"
@@ -22,5 +22,5 @@ function renderRow(data) {
       +     "' class='btn btn-default btn-xs delete-idea'>Delete</a>"
       +   '</td>'
       + '</tr>'
-      );
+  );
 }
