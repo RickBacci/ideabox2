@@ -5,7 +5,6 @@ feature "User" do
 
   scenario "can create an idea", js: true do
     visit root_path
-    click_on 'edit'
 
     fill_in 'title', with: 'Idea title'
     fill_in 'body', with: 'Idea body'

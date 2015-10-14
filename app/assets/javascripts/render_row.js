@@ -13,7 +13,9 @@ function renderRow(data) {
       +   '<td>'
       +     "<a href='/ideas/"
       +       data.id
-      +     "/edit' class='btn btn-default btn-xs edit-idea' >Edit</a>"
+      +     "/edit' data-id='"
+      +       data.id
+      +     "' class='btn btn-default btn-xs edit-idea' >Edit</a>"
       +   '</td>'
       +   '<td>'
       +     "<a href='#'"
