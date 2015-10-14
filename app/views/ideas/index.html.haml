@@ -18,10 +18,3 @@
         %th Title
         %th Body
         %th Quality
-      - @ideas.each do |idea|
-        %tr
-          %td= idea.title
-          %td= idea.body
-          %td= idea.quality
-          %td= link_to "Edit", edit_idea_path(idea), class: 'edit-idea'
-
