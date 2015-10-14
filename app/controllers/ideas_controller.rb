@@ -3,6 +3,7 @@ class IdeasController < ApplicationController
 
   def index
    @ideas = Idea.order(created_at: :desc)
+   @idea = Idea.new
   end
 
   def create
