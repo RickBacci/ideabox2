@@ -28,9 +28,41 @@ class IdeasController < ApplicationController
     head :no_content
   end
 
+  def thumbs_up
+    quality = params[:idea][:quality]
+    respond_with Idea.update(params[:id], quality: raise_quality(quality)), location: nil
+  end
+
+  def thumbs_down
+    quality = params[:idea][:quality]
+    respond_with Idea.update(params[:id], quality: lower_quality(quality)), location: nil
+  end
+
   private
 
   def idea_params
     params.require(:idea).permit(:id, :title, :body, :quality)
+  end
+
+  def raise_quality(quality)
+    case quality
+    when 'swill'
+      return 1
+    when 'plausible'
+      return 2
+    else
+      return 2
+    end
+  end
+
+  def lower_quality(quality)
+    case quality
+    when 'genius'
+      return 1
+    when 'plausible'
+      return 0
+    else
+      return 0
+    end
   end
 end
