@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "User" do
 
-  scenario "can increase the quality of an idea", js: true do
+  xscenario "can increase the quality of an idea", js: true do
     Idea.create(title: 'test idea', body: 'test idea body')
     visit root_path
 
@@ -30,7 +30,7 @@ feature "User" do
   end
 
 
-  scenario "can decrease the quality of an idea", js: true do
+  xscenario "can decrease the quality of an idea", js: true do
     Idea.create(title: 'test idea', body: 'test idea body', quality: 2)
     visit root_path
 
