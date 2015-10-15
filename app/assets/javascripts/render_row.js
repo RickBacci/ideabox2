@@ -1,10 +1,10 @@
 function renderRow(data) {
   return  (
-        '<tr>'
-      +   '<td>'
+        "<tr class='ideas'>"
+      +   "<td class='idea-title'>"
       +     data.title
       +   '</td>'
-      +   '<td>'
+      +   "<td class='idea-body'>"
       +     truncateBody(data)
       +   '</td>'
       +   '<td>'

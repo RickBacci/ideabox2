@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  var searchTerm;
-
   $('#search-bar').on('keyup', function(event) {
 
     $('.ideas').each(function (index, idea) {
@@ -19,5 +17,4 @@ $(document).ready(function() {
   });
 
 });
-
 

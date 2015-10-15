@@ -1,20 +1,32 @@
-
 .row
   .col-md-8.col-md-offset-2
-    %h1.text-center
+    %h1.text-center.white-text
       IdeaBox 2.0
     .panel.panel-default
       .panel-body
         .well
-          = bootstrap_form_tag url: ideas_path, layout: :inline do |f|
-            = f.text_field :title, placeholder: "Title", hide_label: true
-            = f.text_field :body, placeholder: "Body", hide_label: true
-            = f.hidden_field :quality, value: :swill
-            = f.submit 'Create Idea', class: 'pull-right form-control', id: 'idea'
-.row
-  .col-md-8.col-md-offset-2
-    %table.table.table-bordered.table-hover.ideas
-      %tr#headings
-        %th Title
-        %th Body
-        %th Quality
+          .well
+            = bootstrap_form_tag url: ideas_path do |f|
+              = f.text_field :title, placeholder: "Title", hide_label: true
+              = f.text_area :body, placeholder: "Body", hide_label: true
+              = f.hidden_field :quality, value: :swill
+              .clearfix
+                = f.submit 'Create Idea', class: 'btn btn-primary pull-right', id: 'idea'
+
+          .row
+            .col-md-12
+              .well
+                %br
+                %input{ placeholder: 'Search', class: 'asdf form-control', id: 'search-bar' }
+                %br
+                %br
+
+          .row
+            .col-md-12
+              .well
+                %table.table.table-bordered.table-hover.ideas-table
+                  %tr#headings.text-center
+                    %th.text-center Title
+                    %th.text-center Body
+                    %th.text-center Quality
+                    %th.text-center{ colspan: "2" } Actions
