@@ -7,7 +7,7 @@ function renderRow(data) {
       +   "<td class='idea-body'>"
       +     truncateBody(data)
       +   '</td>'
-      +   "<td class='idea-quality" + data.id + "'>"
+      +   "<td class='text-center quality-width idea-quality" + data.id + "'>"
       +     data.quality
       +   '</td>'
       +   '<td>'
