@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $("tbody").on("click", "a.glyphicon-thumbs-up", function(event) {
+  $("tbody").on("click", "button.glyphicon-thumbs-up", function(event) {
     event.preventDefault();
 
     var ideaId      = event.target.parentElement.dataset.id;
