@@ -6,7 +6,10 @@ feature "User" do
     Idea.create(title: 'test idea', body: 'test idea body')
     visit root_path
 
-    find('.edit-idea').click
+    expect(page).to have_content('test idea')
+    expect(page).to have_content('test idea body')
+
+    click_on 'Edit'
 
     fill_in 'Title', with: 'Idea title'
     fill_in 'Body', with: 'Idea body'

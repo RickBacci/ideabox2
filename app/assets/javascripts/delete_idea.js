@@ -4,7 +4,7 @@ $(document).ready(function() {
     console.log('table changed!')
   });
 
-  $("tbody").on( "click", function(event) {
+  $("tbody").on("click", "a.delete-idea", function(event) {
     event.preventDefault();
 
     var urlString = '/ideas/' + event.target.dataset.id;

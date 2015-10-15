@@ -1,10 +1,10 @@
 function renderRow(data) {
   return  (
-        '<tr>'
-      +   '<td>'
+        "<tr class='ideas'>"
+      +   "<td class='idea-title'>"
       +     data.title
       +   '</td>'
-      +   '<td>'
+      +   "<td class='idea-body'>"
       +     truncateBody(data)
       +   '</td>'
       +   '<td>'
@@ -13,7 +13,9 @@ function renderRow(data) {
       +   '<td>'
       +     "<a href='/ideas/"
       +       data.id
-      +     "/edit' class='btn btn-default btn-xs edit-idea' >Edit</a>"
+      +     "/edit' data-id='"
+      +       data.id
+      +     "' class='btn btn-default btn-xs edit-idea' >Edit</a>"
       +   '</td>'
       +   '<td>'
       +     "<a href='#'"
