@@ -2,8 +2,7 @@ require 'rails_helper'
 
 feature "User" do
 
-
-  scenario "can create an idea", js: true do
+  scenario "can delete an idea", js: true do
     visit root_path
 
     fill_in 'title', with: 'Idea title'
@@ -13,6 +12,11 @@ feature "User" do
 
     expect(page).to have_content('Idea title')
     expect(page).to have_content('Idea body')
+
+    page.find("a.delete-idea").trigger("click")
+
+    expect(page).to_not have_content('Idea title')
+    expect(page).to_not have_content('Idea body')
   end
 end
 

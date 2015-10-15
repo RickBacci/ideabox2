@@ -23,17 +23,17 @@ function renderRow(data) {
       +       data.id
       +     "' class='btn btn-default btn-xs delete-idea'>Delete</a>"
       +   '</td>'
-      +   "<td class='thumbs-up'>"
-      +     "<a href='#' class='glyphicon-thumbs-up'"
-      +     " data-id='"
-      +       data.id
-      +     "'><span class='glyphicon glyphicon-thumbs-up'></span></a>"
+      +   "<td class='thumbs-up' data-id='" + data.id + "'>"
+      +     "<button type='button' class='btn btn-default btn-xs glyphicon-thumbs-up'"
+      +     " data-id='" + data.id + "'>"
+      +       "<span class='glyphicon glyphicon-thumbs-up'></span> quality"
+      +     "</button>"
       +   '</td>'
-      +   "<td class='thumbs-down'>"
-      +     "<a href='#' class='glyphicon-thumbs-down'"
-      +     " data-id='"
-      +       data.id
-      +     "'><span class='glyphicon glyphicon-thumbs-down'></span></a>"
+      +   "<td class='thumbs-down' data-id='" + data.id + "'>"
+      +     "<button type='button' class='btn btn-default btn-xs glyphicon-thumbs-down'"
+      +     " data-id='" + data.id + "'>"
+      +       "<span class='glyphicon glyphicon-thumbs-down'></span> quality"
+      +     "</button>"
       +   '</td>'
       + '</tr>'
   );
