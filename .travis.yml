@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.2.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: mc0oyeC6kHNjqUt2ne4YTObUrAYi1jYf8SLEv79+7q8eMvKENK6W8kxLSGkJCN3AQQDGnBTauXtraN/qsTOamHsT2kNlxgrBp2d+f3WXAoeOyqZe4N4aSDNFL6Y0+DwNS/i1LSkjMRuUEH5zO1PiPYmAB1ej3te0ijUMeqkiDlmiODsmVzLeNBjMiyuV9F+zpnqi5Q8pnDjZte5A+ksukkeY/ztvqIHYvYQoDTeJI/vf7mJ+kymM1qTXs4VtCEHgTzWaZ2Xdgfa5IbfOChxg0ov71N3wIuiPxyDJxfU+fSpfd8n1oxxwMh0bSUtsE9Hs4liXl4iu8RRdi9+hlASlYatuiE1xNAgX+lx5S6GDwVdY+pBq12TZzfBFzK9jSaERsDabRalIxMUiBQyZWwLBcbt4z0JK0E//6tO0Z4bpxyO4kJBmLNJJHByHO8ALnnrqZCe175XZPPwr35xfLeROBM3YaQODjv6hzsa9Ri3zQZ1N6kOQtRL82tddZLbRoKvaUr18DPcvnc7NmOfO5gntwNx+MtC514vDLyQuGgRxR4Xi3EemJawdHfA3a+NTK5j53oGTrA/wZmIS4g9bJIEd/b10kpGYD9wdfoGIqFo9TxbZTqsRuFlSWZtOIFBk0yq3+y2Be5GapV12GpdcxHN13r6RxUSanxBp5d64hNNUJvM=
+  app: ideabox2
+  on:
+    repo: RickBacci/ideabox2
+    branch: fix_order_#17

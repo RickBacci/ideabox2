@@ -3,7 +3,7 @@ class IdeasController < ApplicationController
 
   def index
     @idea = Idea.new
-    respond_with Idea.order(created_at: :desc), location: nil
+    respond_with Idea.order(:created_at), location: nil
   end
 
   def create
