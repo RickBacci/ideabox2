@@ -8,4 +8,6 @@ deploy:
   app: ideabox2
   on:
     repo: RickBacci/ideabox2
-    branch: fix_order_#17
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
