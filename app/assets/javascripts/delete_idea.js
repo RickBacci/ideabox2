@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-  $('table').change(function() {
-    console.log('table changed!')
-  });
-
   $("tbody").on("click", "a.delete-idea", function(event) {
     event.preventDefault();
 
@@ -13,8 +9,6 @@ $(document).ready(function() {
       event: event,
       _this: this
     };
-
-    console.log('delete clicked!');
 
     $.ajax({
       type: 'delete',

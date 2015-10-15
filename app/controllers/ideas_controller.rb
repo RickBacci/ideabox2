@@ -30,12 +30,12 @@ class IdeasController < ApplicationController
 
   def thumbs_up
     quality = params[:idea][:quality]
-    respond_with Idea.update(params[:id], quality: raise_quality(quality)), location: nil
+    respond_with Idea.update(params[:id], quality: raise_quality(quality))
   end
 
   def thumbs_down
     quality = params[:idea][:quality]
-    respond_with Idea.update(params[:id], quality: lower_quality(quality)), location: nil
+    respond_with Idea.update(params[:id], quality: lower_quality(quality))
   end
 
   private

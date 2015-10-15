@@ -13,7 +13,7 @@ feature "User" do
     expect(page).to have_content('Idea title')
     expect(page).to have_content('Idea body')
 
-    click_on "Delete"
+    page.find("a.delete-idea").trigger("click")
 
     expect(page).to_not have_content('Idea title')
     expect(page).to_not have_content('Idea body')

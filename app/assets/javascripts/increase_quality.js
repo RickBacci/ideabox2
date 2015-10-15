@@ -14,7 +14,7 @@ $(document).ready(function() {
       dataType: "json",
       success: function(event) {
         var qualityLocation = '.idea-quality' + ideaId;
-        $(qualityLocation).text(getQuality(ideaQuality))
+        $(qualityLocation).text(increaseQuality(ideaQuality))
       },
       error: function(xhr) {
         console.log(xhr.responseText)
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 });
 
-function getQuality(quality) {
+function increaseQuality(quality) {
   switch (quality) {
     case 'swill':
       return 'plausible';

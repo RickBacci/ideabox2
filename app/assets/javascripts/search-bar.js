@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   $('#search-bar').on('keyup', function(event) {
-
     $('.ideas').each(function (index, idea) {
 
       var searchTerm   = $('#search-bar').val();
@@ -12,7 +11,6 @@ $(document).ready(function() {
       var bodyMatches  = ideaBody.toLowerCase().indexOf(searchTerm) !== -1;
 
       $(idea).toggle(titleMatches || bodyMatches);
-
     });
   });
 

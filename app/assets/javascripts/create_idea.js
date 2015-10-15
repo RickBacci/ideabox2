@@ -7,7 +7,6 @@ $(document).ready(function() {
       var ideaBody    = $('#body').val()
       var ideaQuality = $('#_quality').val()
 
-
       $.ajax({
         url: '/ideas',
         type: 'POST',
