@@ -9,7 +9,6 @@
             = bootstrap_form_tag url: ideas_path do |f|
               = f.text_field :title, placeholder: "Title", hide_label: true
               = f.text_area :body, placeholder: "Body", hide_label: true
-              = f.hidden_field :quality, value: :swill
               .clearfix
                 = f.submit 'Create Idea', class: 'btn btn-primary pull-right', id: 'idea'
           .row
